@@ -37,6 +37,8 @@ header{
     height: 100px;
     position: relative;
     z-index: 100;
+    background-color: #f6f6f6;
+    padding-left: 10px;
 }
 header h1 a{
     display: block;
@@ -243,6 +245,7 @@ footer{
     height: 100px;
     background-color: #1d1d1d;
     color: #fff;
+    padding: 0 20px;
 }
 footer .f_logo{
     width: 200px;
