@@ -25,7 +25,7 @@ button{
 }
 body{
     font-family: '맑은 고딕', 'Malgun Gothic';
-    font-size: 15px;
+    font-size: 17px;
     color: #333;
     background-color: #fff;
 }
@@ -34,4 +34,188 @@ img{
     height: 100%;
     object-fit: cover;
     vertical-align: top;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    align-items: center;
+}
+
+header h1 a{
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+header h1 a img{
+    object-fit: contain;
+}
+header nav{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+header nav ul.depth1{
+    display: flex;
+}
+header nav ul.depth1 > li{
+    position: relative;
+}
+header nav ul.depth1 > li > a{
+    display: block;
+    line-height: 50px;
+    width: 130px;
+    text-align: center;
+    border: 1px solid #13a527;
+    color: #13a527;
+    font-size: 22px;
+    font-weight: 700;
+}
+header nav ul.depth1 > li:not(:first-child) > a{
+    border-left: none;
+}
+header nav ul.depth1 > li.active > a,
+header nav ul.depth1 > li > a:focus{
+    background-color: #13a527;
+    color: #fff;
+}
+header nav ul.depth1 > li > ul.depth2{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    display: none;
+}
+header nav ul.depth1 > li > ul.depth2 > li > a{
+    display: block;
+    padding: 10px 10px;
+    text-align: center;
+}
+header nav ul.depth1 > li > ul.depth2 > li > a:hover,
+header nav ul.depth1 > li > ul.depth2 > li > a:focus{
+    background-color: #fff;
+    color: #13a527;
+    font-weight: 700;
+}
+header .h_bg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 150px;
+    background-color: #13a527;
+    display: none;
+}
+.slide{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.slide ul{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3600px;
+    height: 100%;
+}
+.slide ul li{
+    width: 1200px;
+    height: 100%;
+}
+.slide ul li a{
+    display: block;
+}
+.contents{
+    display: flex;
+    height: 200px;
+    padding: 10px 0;
+}
+.contents h2{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #13a527;
+    color: #fff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.contents .notice{
+    width: 400px;
+}
+.contents .notice ul li a{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid #666;
+}
+.contents .gallery,
+.contents .banner{
+    width: 400px;
+    padding-left: 10px;
+}
+.contents .gallery ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contents .gallery ul li{
+    width: 120px;
+}
+.contents .gallery ul li a{
+    display: block;
+    height: 120px;
+}
+.popup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: #13a527;
+    color: #fff;
+    z-index: 101;
+    padding: 20px;
+    display: none;
+}
+.popup p{
+    margin: 20px 0;
+}
+.popup .close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.popup .close button{
+    background-color: #fff;
+    color: #13a527;
+    font-weight: 700;
+    padding: 5px 20px;
+}
+footer{
+    height: 100px;
+    display: flex;
+    gap: 0 60px;
+    align-items: center;
+    position: relative;
+    background-color: #ccc;
+    padding-left: 20px;
+}
+footer .f_logo{
+    width: 200px;
+    height: 40px;
+}
+footer .f_logo img{
+    object-fit: contain;
+}
+footer select{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
