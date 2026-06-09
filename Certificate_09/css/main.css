@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.blind{
+    display: none;
+}
+.wrapper{
+    position: relative;
+    width: 100vw;
+}
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+}
+.wrapper{
+    height: 970px;
+    overflow: hidden;
+}
+.top{
+    height: 850px;
+    display: flex;
+}
+header{
+    width: 200px;
+}
+.content{
+    width: calc(100% - 200px);
+}
+.content .cont01{
+    height: 400px;
+}
+.content .cont02{
+    height: 200px;
+}
+.content .cont03{
+    height: 250px;
+}
+footer{
+    height: 100px;
+    display: flex;
+}
+footer .f_logo{
+    width: 200px;
+}
+footer .box{
+    display: flex;
+}
+footer .box .copyright{
+    flex-grow: 1;
+}
+header{
+    background-color: #ccc;
+    color: #fff;
+    padding: 20px;
+}
+header h1 a{
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+header h1 a img{
+    object-fit: contain;
+}
+header nav{
+    margin-top: 30px;
+}
+header nav > ul.depth1{
+    background-color: #ad21db;
+}
+header nav > ul.depth1 > li{
+    position: relative;
+}
+header nav > ul.depth1 > li > a{
+    display: block;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+    border: 1px solid #fff;
+}
+header nav > ul.depth1 > li:not(:last-child) > a{
+    border-bottom: none;
+}
+header nav > ul.depth1 > li.active > a,
+header nav > ul.depth1 > li > a:hover{
+    background-color: #fff;
+    color: #ad21db;
+}
+header nav > ul.depth1 > li > ul.depth2{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 100;
+    width: 1000px;
+    background-color: #ad21db;
+    color: #fff;
+    display: none;
+}
+header nav > ul.depth1 > li > ul.depth2 > li{
+    display: inline-block;
+}
+header nav > ul.depth1 > li > ul.depth2 > li a{
+    display: block;
+    padding: 10px;
+    width: 170px;
+    text-align: center;
+}
+header nav > ul.depth1 > li > ul.depth2 > li a:hover,
+header nav > ul.depth1 > li > ul.depth2 > li a:focus{
+    background-color: #fff;
+    color: #ad21db;
+    font-weight: 700;
+}
+header .menu_bg{
+    position: absolute;
+    z-index: 90; /* 2차메뉴보다 낮게 깔려야 함 */
+    left: 180px;
+    top: 200px;
+    background-color: #ad21db;
+    width: calc(100% - 180px);
+    height: 160px;
+    display: none;
+}
+.content .cont01 .slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.content .cont01 .slide ul li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.content .cont01 .slide ul li:first-child{
+    display: block;
+}
+.content .cont01 .slide ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.content .cont01 .go{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 130px;
+    height: 300px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.content .cont01 .go ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .cont01 .go ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.content .cont01 .go ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 65px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.content .cont01 .go ul li:first-child a::after{
+    display: none;
+}
+.content .cont01 .go ul li a .photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+.content .cont02 .banner{
+    padding: 10px 40px;
+    height: 100%;
+    background-color: #db2199;
+    color: #fff;
+}
+.content .cont02 .banner a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.content .cont02 .banner a .photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.content .cont02 .banner a .box{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    width: 100%;
+}
+.content .cont02 .banner a .box .text{
+    flex-grow: 1;
+}
+.content .cont02 .banner a .box .text p{
+    margin: 20px 0;
+}
+.content .cont02 .banner a .box .arrow{
+    width: 80px;
+    height: 80px;
+}
+.content .cont03{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #f6f6f6;
+}
+.content .cont03 .notice,
+.content .cont03 .gallery{
+    width: 50%;
+}
+.content .cont03 .notice{
+    padding-right: 10px;
+}
+.content .cont03 .gallery{
+    padding-left: 10px;
+}
+.content .cont03 h2{
+    display: inline-block;
+    background-color: #ad21db;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 0;
+    width: 120px;
+    text-align: center;
+    margin-left: 15px;
+} 
+.content .cont03 ul{
+    height: 191px;
+    background-color: #ad21db;
+    color: #fff;
+    padding: 20px 10px;
+}
+.content .cont03 ul li a{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #fff;
+}
+.content .cont03 .gallery ul{
+    display: flex;
+    justify-content: space-between;
+}
+.content .cont03 .gallery ul li a{
+    display: block;
+    width: 200px;
+    height: 100%;
+    border-bottom: none;
+    padding: 0;
+}
+.content .cont03 .gallery ul li a .photo{
+    width: 200px;
+    height: 100px;
+}
+.content .cont03 .gallery ul li a span{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+.popup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 250px;
+    background-color: #ad21db;
+    color: #fff;
+    padding: 20px;
+    display: none;
+}
+.popup p{
+    margin: 20px 0;
+}
+.popup .close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.popup .close button{
+    padding: 5px 20px;
+    background-color: #fff;
+    color: #ad21db;
+    font-weight: 700;
+}
+footer{
+    align-items: center;
+    background-color: #666;
+    color: #fff;
+}
+footer .f_logo{
+    width: 200px;
+    height: 40px;
+}
+footer .f_logo img{
+    object-fit: contain;
+}
+footer .box{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 10px 0;
+    width: calc(100% - 200px);
+}
