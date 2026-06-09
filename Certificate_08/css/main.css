@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.wrapper{
+    width: 100vw;
+    position: relative;
+    height: 950px;
+}
+.blind{
+    display: none;
+}
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+}
+.top{
+    height: 850px;
+    display: flex;
+}
+.top header{
+    width: 200px;
+    background-color: palevioletred;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    z-index: 100;
+}
+.top header h1 a{
+    display: block;
+}
+.top header nav{
+    margin: 30px 0;
+}
+.top header nav > ul.depth1 > li > a{
+    display: block;
+    padding: 5px;
+    border: 3px solid #ad21db;
+    font-size: 22px;
+    font-weight: 700;
+}
+.top header nav > ul.depth1 > li:not(:last-child) > a{
+    border-bottom: none;
+}
+.top header nav > ul.depth1 > li.active > a,
+.top header nav > ul.depth1 > li > a:hover{
+    background-color: #ad21db;
+    border-color: #ad21db;
+    color: #fff;
+}
+.top header nav > ul.depth1 > li > ul.depth2{
+    background-color: #fff;
+    color: #ad21db;
+    display: none;
+}
+.top header nav > ul.depth1 > li > ul.depth2 > li > a{
+    display: block;
+    padding: 10px 20px;
+}
+.top header nav > ul.depth1 > li > ul.depth2 > li > a:hover,
+.top header nav > ul.depth1 > li > ul.depth2 > li > a:focus{
+    font-weight: 700;
+    background-color: #ad21db;
+    color: #fff;
+}
+.top header > ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+.top header > ul > li > a{
+    display: block;
+    width: 80px;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+.top header > ul > li > a::after{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+}
+.top header > ul > li:first-child > a::after{
+    display: none;
+}
+.top .content{
+    width: calc(100% - 200px);
+}
+.top .content .slide{
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.top .content .slide ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1200px;
+}
+.top .content .slide ul li{
+    height: 400px;
+    width: 100%;
+}
+.top .content .slide ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.top .content .banneer{
+    height: 200px;
+    padding: 10px 20px;
+}
+.top .content .banneer a{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    height: 100%;
+}
+.top .content .banneer a .photo{
+    flex-basis: 250px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.top .content .banneer a .text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+.top .content .banneer a .text ul li{
+    padding: 5px 0;
+}
+.top .content .banneer a .arrow{
+    width: 50px;
+    height: 50px;
+}
+.top .content .bbs{
+    height: 250px;
+    padding: 10px 30px;
+    position: relative;
+}
+.top .content .bbs > ul{
+    display: flex;
+}
+.top .content .bbs > ul > li{
+    width: 150px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+}
+.top .content .bbs > ul > li.active{
+    background-color: #ad21db;
+}
+.top .content .bbs > ul > li button{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.top .content .bbs > ul > li.notice .tab_cont{
+    padding: 10px 60px;
+}
+.top .content .bbs > ul > li .tab_cont{
+    position: absolute;
+    width: 100%;
+    height: 181px;
+    left: 20px;
+    background-color: #ad21db;
+    padding: 10px 60px 10px 30px;
+    display: none;
+}
+.top .content .bbs > ul > li.active .tab_cont{
+    display: block;
+}
+.top .content .bbs > ul > li.notice .tab_cont ul li a{
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 50px 9px 10px;
+    border-bottom: 1px solid #fff;
+}
+.top .content .bbs > ul > li.gallery ul{
+    display: flex;
+    gap: 0 20px;
+    height: 100%;
+}
+.top .content .direct{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 300px;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+.top .content .direct ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+}
+.top .content .direct ul li{
+    position: relative;
+}
+.top .content .direct ul li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.top .content .direct ul li:last-child::after{
+    display: none;
+}
+.top .content .direct ul li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top .content .direct ul li a img{
+    width: 50px;
+    height: 50px;
+}
+.popup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    background-color: #ad21db;
+    color: #fff;
+    display: none;
+}
+.popup p{
+    margin: 20px 0;
+}
+.popup .close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.popup .close button{
+    padding: 5px 20px;
+    background-color: #fff;
+    color: #ad21db;
+    font-weight: 700;
+}
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    color: #fff;
+}
+footer .f_logo{
+    width: 200px;
+    height: 100%;
+}
+footer .f_logo img{
+    width: 200px;
+    height: 100%;
+    object-fit: contain;
+}
+footer .f_box{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 200px);
+    padding-left: 30px;
+}
+footer .f_box .copyright{
+    width: calc(100% - 300px);
+}
+footer .f_box  .sns{
+    display: flex;
+    gap: 0 15px;
+}
+footer .f_box  .sns li a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+}
