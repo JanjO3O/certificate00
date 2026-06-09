@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+.blind{
+    display: none;
+}
+.wrapper{
+    position: relative;
+}
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+}
+
+.wrapper{
+    display: flex;
+}
