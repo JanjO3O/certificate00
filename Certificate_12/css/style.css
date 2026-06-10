@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+body{
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+}
+.blind{
+    display: none;
+}
+.wrapper{
+    position: relative;
+    min-width: 1325px;
+    height: 900px;
+}
+
+.top{
+    height: 800px;
+    display: flex;
+}
+.popup{
+    display: none;
+}
+footer{
+    height: 100px;
+}
+header{
+    width: 200px;
+}
+.content{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.slide{
+    width: calc(100% - 600px);
+}

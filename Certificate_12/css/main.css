@@ -1,0 +1,84 @@
+:root{
+    --main-color: #ad21db;
+    --sub-color: #db2199;
+    --text-color: #333;
+    --color-w: #fff;
+}
+header{
+    padding: 10px;
+    background-color: #dcdcdc;
+}
+header h1 a{
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+header h1 a img{
+    object-fit: contain;
+}
+header nav{
+    margin: 30px 0;
+}
+header nav > ul.depth1 > li{
+    position: relative;
+}
+header nav > ul.depth1 > li > a{
+    display: block;
+    padding: 10px 5px;
+    background-color: var(--main-color);
+    color: var(--color-w);
+    font-size: 22px;
+    font-weight: 700;
+}
+header nav > ul.depth1 > li.active > a,
+header nav > ul.depth1 > li > a:hover{
+    background-color: var(--sub-color);
+}
+header nav > ul.depth1 > li > ul.depth2{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+header nav > ul.depth1 > li > ul.depth2 > li{
+    height: 100%;
+}
+header nav > ul.depth1 > li > ul.depth2 > li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sub-color);
+    color: var(--color-w);
+    width: 100%;
+    height: 100%;
+}
+header nav > ul.depth1 > li > ul.depth2 > li > a:hover,
+header nav > ul.depth1 > li > ul.depth2 > li > a:focus{
+    background-color: var(--color-w);
+    color: var(--sub-color);
+    font-weight: 700;
+}
+.slide{
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+}
+.slide ul li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.slide ul li:first-child{
+    display: block;
+}
+.slide ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
